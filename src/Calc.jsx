@@ -19,6 +19,10 @@ export default function Calc(){
         setTxt(txt.substring(0,txt.length-1));
     }
     function evaluateExp() {
+        if(txt.length==0){
+            setTxt("0");
+            return;
+        }
         try {
             setTxt(eval(txt).toString());
         } catch {
